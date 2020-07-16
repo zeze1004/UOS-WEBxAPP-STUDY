@@ -1,4 +1,4 @@
-﻿# UOS-STUDY
+﻿# UOS-STURDY
  
  다들 모해? 자니?
  <br>
