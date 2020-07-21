@@ -1,0 +1,12 @@
+.menu{
+    height: 50%;
+}
+
+a{
+    display: block;
+}
+div{
+    /* border: black 1px dotted; */
+    text-align: center;
+    vertical-align: middle;
+}
