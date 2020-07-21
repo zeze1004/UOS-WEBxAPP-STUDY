@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/pop/per.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	
+<style>
+#findLB{
+	color:#565555;
+}
+#signupLB{
+	color:#565555;
+}
+</style>
+
+</head>
+<body>
+ 
+ <button id="testBtn" class="btn">로그인</button>
+
+	<div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+      	<!-- 모달 내용 -->
+      	<div class="modal-body">
+
+
+      	<div id="login">
+        
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-12">
+                    <div id="login-box" class="col-md-30">
+                       
+                        <form id="login-form" class="form" action="#" method="post">
+                            <h3 class="text-center text-info">Login</h3><br>
+
+
+							<!-- ID 입력창 -->
+                            <div class="form-group">
+                                <input type="text" name="userID" id="UserID" placeholder="ID" class="form-control">
+                            </div>
+
+
+							<!-- Password 입력창 -->
+                            <div class="form-group">
+                               
+                                <input type="password" name="password" id="Password" placeholder="Password" class="form-control">
+                            </div>
+
+
+                         
+                            <div class="form-group">
+                            <center>
+                            	<!-- ID 기억하기 -->
+                                <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="Remember-me" name="remember-me" type="checkbox"></span></label><br>
+
+                                <!-- login -->
+                                <input type="submit" name="submit" class="btn btn-info btn-md" id="Submit" value="Login">
+                            </center>
+                            </div>
+                        </form>
+
+
+							<!-- ID/비번 찾기 -->
+							<div class="form-group">
+								<center>
+                           		 <div id="register-link">
+                           		 <label id="findLB">Forgot your <a href="#">ID</a> / <a href="#">Password</a>?</label>
+                            	</div>
+
+							<!-- 회원가입 -->
+                            	<div id="signup-link">
+                           		 <label id="signupLB">Don't have an account? <a href="#">Sign up</a></label>
+                            	</div>
+                            	</center>
+                        	</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div></div></div></div>
+
+	<script>
+		$('#testBtn').click(function(e){
+			e.preventDefault();
+			$('#testModal').modal("show");
+		});
+
+  $("#Submit").click(function(){
+					if($("#UserID").val().length==0)
+						{alert("ID를 입력하세요.");
+					$("#UserID").focus(); return false;}
+
+					if($("#Password").val().length==0)
+						{alert("비밀번호를 입력하세요.");
+					$("#Password").focus(); return false;}
+		});
+	</script>
+
+</body>
+
+</html>
