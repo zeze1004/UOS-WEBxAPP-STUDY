@@ -14,6 +14,7 @@
     h1{
       font-size:40px;
       text-align:center;
+      /* 부트스트랩으로 p..? */
       padding:20px;
       margin:0;
     }
@@ -26,13 +27,20 @@
 
 <body>
     <div class="container-fluid">
-        <div class="header row">
+      <!-- row: 한줄에 여러개 컬럼 만들 때 -->
+        <div class="header">
           <div>
             <h1><a href="home.html">자기개발서</a></h1>
           </div>
+          <!-- container-fluid: 꽉 차게 but 약간의 패딩이 있다(완전 여백 zero X)-->
+          <!-- 완전 채울려면 W(너비) 100% -->
           <div class = "container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- navbar-expand-lg: 네비게이션 바를 화면 크기에 따라 반응하게 -->
+            <!-- navbar-dark bg-dark :light 버전으로 바꿔도 된다  -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="#">MENU</a>
+               <!-- toggler(토글) : 스위치 버튼 or 햄버거 버튼 -->
+               <!-- collapse: 덮어씌워져서 안보이는 상태 -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -40,6 +48,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
+                      <!-- 시각장애인이나 로봇만 볼 수 있는 sr-only : 지워도 시각적으로 변화는 없다 -->
                       <a class="nav-link" href="#">메뉴1 <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
@@ -52,6 +61,7 @@
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">부메뉴1</a>
                         <a class="dropdown-item" href="#">부메뉴2</a>
+                        <!-- dropdown-divider 줄 쳐서 구분 -->
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">기타</a>
                       </div>
