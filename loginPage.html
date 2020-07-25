@@ -8,20 +8,26 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 	
 <style>
+
 #findLB{
 	color:#565555;
 }
 #signupLB{
 	color:#565555;
 }
+
 </style>
+
 
 </head>
 <body>
  
  <button id="testBtn" class="btn">로그인</button>
 
+	
+<!-- tabindex : tab 키 누르면 다른 버튼으로 이동-->
 	<div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        
       <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
       	<!-- 모달 내용 -->
@@ -32,68 +38,67 @@
         
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
+                <!-- col-md-12: 가운데를 12칸 -->
                 <div id="login-column" class="col-md-12">
-                    <div id="login-box" class="col-md-30">
+                    <div id="login-box" class="col-md-6">
                        
                         <form id="login-form" class="form" action="#" method="post">
                             <h3 class="text-center text-info">Login</h3><br>
+                            
 
 
-							<!-- ID 입력창 -->
+							             <!-- ID 입력창 -->
                             <div class="form-group">
                                 <input type="text" name="userID" id="UserID" placeholder="ID" class="form-control">
                             </div>
 
 
-							<!-- Password 입력창 -->
+							             <!-- Password 입력창 -->
                             <div class="form-group">
-                               
                                 <input type="password" name="password" id="Password" placeholder="Password" class="form-control">
                             </div>
 
 
-                         
                             <div class="form-group">
-                            <center>
-                            	<!-- ID 기억하기 -->
-                                <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="Remember-me" name="remember-me" type="checkbox"></span></label><br>
+                            
+                            <!-- ID 기억하기 --> 
+                              <label class="text-info">Remember me <input id="Remember-me" name="remember-me" type="checkbox"></label><br>
 
-                                <!-- login -->
-                                <input type="submit" name="submit" class="btn btn-info btn-md" id="Submit" value="Login">
-                            </center>
+                              <!-- login 버튼-->
+                               <input type="submit" name="submit" class="btn btn-info btn-md" id="Submit" value="Login">
+                            
                             </div>
                         </form>
 
 
-							<!-- ID/비번 찾기 -->
-							<div class="form-group">
-								<center>
-                           		 <div id="register-link">
+                         
+							           <!-- ID/비번 찾기 -->
+                           	<div id="register-link">
                            		 <label id="findLB">Forgot your <a href="#">ID</a> / <a href="#">Password</a>?</label>
-                            	</div>
+                            </div>
 
-							<!-- 회원가입 -->
-                            	<div id="signup-link">
-                           		 <label id="signupLB">Don't have an account? <a href="#">Sign up</a></label>
-                            	</div>
-                            	</center>
-                        	</div>
+							           <!-- 회원가입 -->
+                            <div id="signup-link"> 
+                           		 <label id="signupLB">Don't have an account? <a href="#">Sign up</a></label> 
+                            </div>
+                        
 
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </div></div></div></div>
 
+
 	<script>
+        // $는 jquery
 		$('#testBtn').click(function(e){
 			e.preventDefault();
 			$('#testModal').modal("show");
 		});
 
-  $("#Submit").click(function(){
+$("#Submit").click(function(){
 					if($("#UserID").val().length==0)
 						{alert("ID를 입력하세요.");
 					$("#UserID").focus(); return false;}

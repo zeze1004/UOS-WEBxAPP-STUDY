@@ -1,0 +1,19 @@
+{
+  "name": "uos-webxapp-study",
+  "version": "1.0.0",
+  "description": "다들 모해? 자니?\r  <br>\r  총장상까지 힘냅시다~!~<br>\r  오또케 아무도 fork 안할 수 이쏘..?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeze1004/UOS-WEBxAPP-STUDY.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeze1004/UOS-WEBxAPP-STUDY/issues"
+  },
+  "homepage": "https://github.com/zeze1004/UOS-WEBxAPP-STUDY#readme"
+}
