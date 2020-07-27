@@ -25,6 +25,6 @@
  1. 디바고 : 제제가 올린 loginPage.html 수정해서 modal.html로 푸쉬 -> divaKo 브랜치
  - 회원가입 모달에 ID입력창도 추가!
  2. 디바고 : modal.html + 기존 home.html(당근+규짱) 합쳐서 home.html로 푸쉬 -> divaKo 브랜치
- 3. 2번 과정에서 기존 home.html파일에 로드된 main.css가 modal.html의 모달 배열을 바꿔버려서 합칠 때 main.css를 빼버렸음
-    main.css 파일에서 태그에 대해 속성을 부여하지 말고 id나 class를 통해 부여하도록 수정하면 될 것 같음!! ->  **규짱이나 당근이 수정 바라요.. **
-     +) 헉 근데 규짱 파일 저거말구 다른버전 있었던거같은디 잘못합쳤나 꺅
+ 3. - 2번 과정에서 기존 home.html파일에 로드된 main.css가 modal.html의 모달 배열을 바꿔버려서 합칠 때 main.css를 빼버렸음
+    - main.css 파일에서 태그에 대해 속성을 부여하지 말고 id나 class를 통해 부여하도록 수정하면 될 것 같음!! ->  **규짱이나 당근이 수정 바라요.. **
+    - +) 헉 근데 규짱 파일 저거말구 다른버전 있었던거같은디 잘못합쳤나 꺅
