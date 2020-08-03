@@ -32,9 +32,10 @@ app.get('/', function(req,res){
     res.render('loginPage.ejs') //app.set에서 views폴더로 옮겼기 때문에 바로 ejs 파일명 작  
 })
 
-// db 세팅
-mongoose.connect
+app.post('/message',)
 
+
+// db 세팅
 mongoose.connect(keys.dbURL,{
     useNewUrlParser: true,
     useUnifiedTopology: true
