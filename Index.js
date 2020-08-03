@@ -7,6 +7,7 @@ const http = require('http')
 
 // express
 const app = express()
+const httpServer = http.createServer(app)
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
@@ -17,10 +18,6 @@ app.set('views', __dirname + '/views')
 // 이미지 등 정적파일 올리는 폴더
 app.use(express.static('public'))
 
-app.get('/', function(req,res){
-    res.render('loginPage.ejs') //app.set에서 views폴더로 옮겼기 때문에 바로 ejs 파일명 작  
-})
-
 // port
 const PORT = keys.PORT
 
@@ -29,6 +26,11 @@ app.use(morgan('dev'))
 
 // f12 소스코드 이쁘게 보여주기
 app.locals.pretty = true;
+
+// server
+app.get('/', function(req,res){
+    res.render('loginPage.ejs') //app.set에서 views폴더로 옮겼기 때문에 바로 ejs 파일명 작  
+})
 
 // db 세팅
 mongoose.connect
@@ -42,7 +44,7 @@ mongoose.connect(keys.dbURL,{
         console.log(err);
     } else {
         //DB 연결 시 에러가 없었으면, 서버 시작
-        httpServer.listen(8080);
+        httpServer.listen(7777);
         // 실행 성공 시 뜨는 로그
         console.log("서버 성공");
     }
