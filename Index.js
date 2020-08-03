@@ -36,6 +36,8 @@ app.get('/', function(req,res){
 app.post('/enrollment',function(req,res){
     let enrollmentEmail = req.body.enrollmentEmailValue
     let enrollmentPassword = req.body.enrollmentPasswordValue1
+    const userController = require('./controllers/userController')
+    userController.createUser(enrollmentEmail, enrollmentPassword)
     console.log("이메일: ", enrollmentEmail,"비밀번호: ", enrollmentPassword)
     res.send('회원가입 요청되었습니다')
 })
