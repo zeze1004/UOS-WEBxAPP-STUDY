@@ -29,11 +29,15 @@ app.locals.pretty = true;
 
 // server
 app.get('/', function(req,res){
-    res.render('loginPage.ejs') //app.set에서 views폴더로 옮겼기 때문에 바로 ejs 파일명 작  
+    res.render('loginPage.ejs') 
 })
 
 app.post('/message',)
-
+app.post('/enrollment',function(req,res){
+    let enrollmentEmail = req.body.enrollmentEmailValue
+    let enrollmentPassword = req.body.enrollmentPasswordValue1
+    console.log(enrollmentEmail, enrollmentPassword)
+})
 
 // db 세팅
 mongoose.connect(keys.dbURL,{

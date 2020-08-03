@@ -60,9 +60,6 @@
       </form>
     </div>
   </div>
- 
-
-  
 
     <!-- *******ZeZe ID/비번 찾기******** -->
     <!-- Button trigger modal -->
@@ -74,6 +71,8 @@
     <button type="button" class="btn findPasswordModal" data-toggle="modal" data-target="#findPasswordModal">
       비밀번호
     </button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
     <!-- Modal -->
@@ -138,8 +137,6 @@
       </div>
     </div>
 
-
-
     <!-- 회원가입 -->
     <!-- <div id="signup-link"> 
                            		 <label id="signupLB">Don't have an account? <a href="#">Sign up</a></label> 
@@ -162,7 +159,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form>
+            <form id="clickEnrollment">
               <div class="form-group">
                 <label for="exampleInputEmail1">이메일 주소</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -191,7 +188,34 @@
       </div>
     </div>
 
-    
+    <!-- 회원가입 DB -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $("#clickEnrollment").submit(function (e){
+    e.preventDefault();
+    // alert("회원가입 페이지로 이동합니다")
+    let enrollmentEmailValue = $("#exampleInputEmail1").val()
+    let enrollmentPasswordValue1 = $("#exampleInputPassword1").val()
+    let enrollmentPasswordValue2 = $("#exampleInputPassword2").val()
+
+    if(enrollmentPasswordValue1 != enrollmentPasswordValue2){
+      console.log("error")
+      return 
+    }
+
+    $.ajax({
+      data: {
+        enrollmentEmailValue : enrollmentEmailValue,
+        enrollmentPasswordValue1 : enrollmentPasswordValue1
+      },
+      url: '/enrollment',
+      methond : 'POST',
+      success: function(response){
+        alert(response)
+      }
+    })
+  })
+</script>
 
 
   <script>
