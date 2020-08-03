@@ -1,8 +1,8 @@
 {
   "name": "uos-webxapp-study",
   "version": "1.0.0",
-  "description": "다들 모해? 자니?\r  <br>\r  총장상까지 힘냅시다~!~<br>\r  오또케 아무도 fork 안할 수 이쏘..?",
-  "main": "index.js",
+  "description": "서울시립대 학습공동체 <자기개발서>",
+  "main": "Index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/zeze1004/UOS-WEBxAPP-STUDY/issues"
   },
-  "homepage": "https://github.com/zeze1004/UOS-WEBxAPP-STUDY#readme"
+  "homepage": "https://github.com/zeze1004/UOS-WEBxAPP-STUDY#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.27",
+    "morgan": "^1.10.0"
+  }
 }
