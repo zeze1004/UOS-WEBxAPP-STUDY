@@ -3,6 +3,7 @@ const express = require('express')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const keys = require('./keys.json')
+const http = require('http')
 
 // express
 const app = express()
@@ -16,6 +17,10 @@ app.set('views', __dirname + '/views')
 // 이미지 등 정적파일 올리는 폴더
 app.use(express.static('public'))
 
+app.get('/', function(req,res){
+    res.render('loginPage.ejs') //app.set에서 views폴더로 옮겼기 때문에 바로 ejs 파일명 작  
+})
+
 // port
 const PORT = keys.PORT
 
@@ -27,3 +32,20 @@ app.locals.pretty = true;
 
 // db 세팅
 mongoose.connect
+
+mongoose.connect(keys.dbURL,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+    
+}, function(err){
+    if(err){
+        console.log(err);
+    } else {
+        //DB 연결 시 에러가 없었으면, 서버 시작
+        httpServer.listen(8080);
+        // 실행 성공 시 뜨는 로그
+        console.log("서버 성공");
+    }
+});
+
+console.log("hello, world!");
