@@ -1,7 +1,7 @@
 const express = require('express')
 const router  = express.Router()
 
-const sidam = require('../js/main');
+const main = require('../js/main');
 {
     //router.get ('/',           (req, res) => { sidam.home(req, res)     })
     router.get ('/login',      (req, res) => { sidam.login(req, res)    })

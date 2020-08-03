@@ -32,11 +32,12 @@ app.get('/', function(req,res){
     res.render('loginPage.ejs') 
 })
 
-app.post('/message',)
+//app.post('/message',)
 app.post('/enrollment',function(req,res){
     let enrollmentEmail = req.body.enrollmentEmailValue
     let enrollmentPassword = req.body.enrollmentPasswordValue1
-    console.log(enrollmentEmail, enrollmentPassword)
+    console.log("이메일: ", enrollmentEmail,"비밀번호: ", enrollmentPassword)
+    res.send('회원가입 요청되었습니다')
 })
 
 // db 세팅
