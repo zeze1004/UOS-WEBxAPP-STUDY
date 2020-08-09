@@ -55,6 +55,7 @@ mongoose.connect(keys.dbURL,{
         httpServer.listen(7777);
         // 실행 성공 시 뜨는 로그
         console.log("서버 성공");
+        console.log("https://localhost:7777");
     }
 });
 
